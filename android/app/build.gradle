@@ -1,3 +1,7 @@
+plugins {
+  id("com.android.application")
+  id("com.google.gms.google-services")
+}
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
@@ -116,4 +120,6 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+    implementation(platform("com.google.firebase:firebase-bom:33.4.0"))
+    implementation("com.google.firebase:firebase-analytics")
 }
